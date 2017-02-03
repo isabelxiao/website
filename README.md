@@ -1,2 +1,2 @@
-# my text website
-The webpage for Data Visualization course
+# My Website
+The website for Data Visualization course
