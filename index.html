@@ -1,28 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Page Example</title>
+    <meta charset="utf-8">
+    <meta http-enquiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="Width=device-width, initial-scale=1">
+    <title>Homepage</title>
 
-    <!-- Stylesheet link -->
-    <link rel="stylesheet" type="text/css" href="css/site-specific.css">
-
-    <!-- Google fonts code -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div class="title">
-      <h1>DATA VISUALIZATION FOR ARCHITECTURE, URBANISM AND THE HUMANITIES</h1>
-      <h3>by ISABEL XIAO</h3>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Huiyu (Isabel) Xiao</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assignments<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Chart Description</a></li>
+                <li><a href="#">Intro to P5</a></li>
+                <li><a href="assignments/datasetViz.html">Dataset Visualization</a></li>
+              </ul>
+            </li>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+          <div class="container">
+            <h1>Data Visualization</h1>
+            <p>Coursework related to the Data Visualization for Architecture, Urbanism and the Humanities course (ARCH4892) at Columbia University.</p>
+            <br>
+            <p><a class="btn btn-primary btn-lg" href="https://github.com/juanfrans-courses/dataViz_arch_hum" role="button">Course page »</a> <a class="btn btn-primary btn-lg" href="https://www.tumblr.com/blog/dataviz2017spring" role="button">Tumblr blog »</a></p>
+          </div>
     </div>
-    <div class="bio">
-      <img class="bioImage" src="img/profile.jpg">
-      <p class="bioText">I am a gradute student at <a href="http://qmss.columbia.edu/">Quantitative Methods in the Social Sciences</a> program at Columbia University. I study data science, computer science, finance and social sciences. This page is a display of my projects from <a href="https://github.com/juanfrans-courses/dataViz_arch_hum">Data Visulization</a> course.</p>
+
+  <section class="call-to-action">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <span class="glyphicon glyphicon-picture glyphicon-large" aria-hidden="true"></span>
+          <h3>Chart Description</h3>
+          <p>A brief discription about Gantt chart. The history, the characteristics, the way to build one and more...</p>
+        </div>
+        <div class="col-md-4">
+          <span class="glyphicon glyphicon-road glyphicon-large" aria-hidden="true"></span>
+          <h3>Intro to P5</h3>
+          <p>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Lorem ipsum dolor.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="glyphicon glyphicon-signal glyphicon-large" aria-hidden="true"></span>
+          <h3>Dataset Visualization</h3>
+          <p>Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        </div>
+      </div>
     </div>
-    <div class=linkList>
-      <h2>ASSIGNMENTS</h2>
-      <ul>
-        <li class="assignmentLink"><a href="assignments/assignment_01.html">Assignment 1 - Chart Description: Gantt Chart</a></li>
-      </ul>
-    </div>
+  </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

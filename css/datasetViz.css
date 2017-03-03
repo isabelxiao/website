@@ -1,0 +1,13 @@
+body {
+  padding-top: 50px;
+  color: #f7f7f7;
+  font-family: 'Montserrat', sans-serif;
+
+  justify-content: center;
+  align-items: center;
+}
+.starter-template {
+  padding: 40px 15px;
+  color: black;
+  text-align: center;
+}

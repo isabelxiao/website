@@ -81,3 +81,14 @@ li.assignmentLink > a{
 li.assignmentLink > a:hover{
     background-color: #FFFF00; 
 }
+
+.call-to-action {
+    text-align: center;
+}
+.call-to-action p {
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+.glyphicon-large {
+    font-size: 100px;
+}
