@@ -19,6 +19,7 @@ var topRefugeesTable = new p5.Table;
 var maxTotal = 0;
 var maxLabel = 0;
 var maxLength = 550;
+var headers = ['Country','Refugees','Asylum-seekers','Returned refugees','IDPs','Returned IDPs','Stateless','Others of concern','Total']
 
 
 function preload() { // preload runs first before all others
@@ -64,39 +65,44 @@ function setup() { // before the draw()
 }
 
 function createNewTable() {
-	topRefugeesTable.addColumn('Country');
-	topRefugeesTable.addColumn('Total');
+	for (var i = 0; i < headers.length; i++) {
+		topRefugeesTable.addColumn(headers[i]);
+	}
 	for (var i = 0; i < refugeeTable.getRowCount(); i++) {
 		var totalRefugees = refugeeTable.getNum(i, 'Total');
+
 		if (totalRefugees >= 100000) {
 			var newRow = topRefugeesTable.addRow();
-			newRow.setString('Country', refugeeTable.getString(i, 'Country'));
-			newRow.setNum('Total', refugeeTable.getNum(i, 'Total'));
+
+			for (var j = 0; j < headers.length; j++) {
+				newRow.setString(headers[j], refugeeTable.getString(i, headers[j]));
+			}
 		}
 	}
 	print('New top refugee table created');
 }
 
-function drawCountries(tableName) {
+function drawCountries(category) {
 	fill(0);
 	noStroke();
 	textAlign(LEFT, TOP);
-	for (var i = 0; i < tableName.getRowCount(); i++) {
-		var total = tableName.getNum(i, 'Total');
+	for (var i = 0; i < topRefugeesTable.getRowCount(); i++) {
+		var total = topRefugeesTable.getNum(i, category);
 		var length = map(total, 0, maxTotal, 0, maxLength);
 		rect(maxLabel * 5, 10 + 15 * i, length, 12);
 		text(nfc(total, 0), maxLabel * 5 + length + 5, 10 + 15 * i);
 	}
 
 	textAlign(RIGHT, TOP);
-	for (var i = 0; i < tableName.getRowCount(); i++) {
-		text(tableName.getString(i, 'Country'), maxLabel * 5 - 5, 10 + 15 * i);
+	for (var i = 0; i < topRefugeesTable.getRowCount(); i++) {
+		text(topRefugeesTable.getString(i, 'Country'), maxLabel * 5 - 5, 10 + 15 * i);
 	}
 }
 
 function draw() {
 	background(255);
-	drawCountries(topRefugeesTable);
+	// drawCountries(RefugeeTable);
+	drawCountries('Total');
 }
 
 // function draw() {
