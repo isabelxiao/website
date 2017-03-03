@@ -7,6 +7,9 @@ h1,
 h2 {
 	font-weight: bold;
 }
+h3 {
+	color: #f7f7f7;
+}
 p {
 	font-size: 16px;
 	color: #cdcdcd;
@@ -40,7 +43,7 @@ p {
 	background: #4484CE;
 }
 .navbar-inverse .navbar-nav .dropdown-menu li a:hover {
-	background: #2C463C;
+	background: #256BC0;
 }
 .dropdown-menu li a {
 	padding: 10px;
@@ -58,6 +61,7 @@ p {
 }
 .glyphicon-large {
 	font-size: 100px;
+	color: #f7f7f7;
 }
 .call-to-action {
 	text-align: center;

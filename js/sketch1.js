@@ -2,7 +2,7 @@ var childTable;
 var gender = {"boys": 0, "girls": 0};
 var age = {"0 - 5": 0, "6 - 11": 0, "12 - 17": 0};
 var yearList = {1984: 0, 1990: 0, 1991: 0, 1994: 0, 1995: 0, 1996: 0, 1997: 0, 1998: 0, 1999: 0, 2000: 0, 2001: 0, 2002: 0, 2003: 0, 2004: 0, 2005: 0, 2006: 0, 2007: 0, 2008: 0, 2009: 0, 2010: 0, 2011: 0, 2012: 0, 2013: 0, 2014: 0, 2015: 0,};
-var cnv;
+
 
 
 function preload() {
@@ -11,7 +11,7 @@ function preload() {
 }
 
 function setup() {
-	createCanvas(1000, 2000);
+	createCanvas(1000, 1500);
 	textSize(28);
 	console.log("Setup complete");
 	print(childTable.getRowCount() + " rows loaded");
@@ -67,8 +67,20 @@ function draw() {
 	text(age["12 - 17"], 310 + age["12 - 17"], 300 + 40 * 2);
 
 	// year
-	// for (var i = 0; i < Obejct.keys(yearList).length; i++) {
-
-	// }
-
+	var count = 0;
+	text("Victims by year", 425, 540);
+	yearArr = Object.keys(yearList);
+	for (var i = 1984; i < 2016; i++) {
+		if (yearArr.indexOf(i.toString()) > -1) {
+			count++;
+			print(count);
+			textAlign(RIGHT, TOP);
+			rect(300, 550 + 40 * count, yearList[i] * 5.5, 30);
+			text(i, 290, 550 + 40 * count);
+			textAlign(LEFT, TOP);
+			text(yearList[i], 310 + yearList[i] * 5.5, 550 + 40 * count)
+		}
+	}
 }
+
+
