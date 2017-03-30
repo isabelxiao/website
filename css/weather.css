@@ -1,0 +1,27 @@
+body {
+  padding-top: 20px;
+  color: #323232;
+  font-family: 'Montserrat', sans-serif;
+
+
+  justify-content: center;
+  align-items: center;
+}
+p{
+  font-size: 75%;
+}
+
+.search-bar {
+  padding: 40px 10px;
+  color: black;
+  text-align: center;
+}
+
+.legend {
+  text-align: center;
+  padding: 15px;
+}
+
+.brief-report {
+  text-align: center;
+}
